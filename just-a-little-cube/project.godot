@@ -49,6 +49,7 @@ Down={
 2d_physics/layer_1="Floor"
 2d_physics/layer_3="Spike"
 2d_physics/layer_4="Stop"
+2d_physics/layer_5="phys"
 
 [physics]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b7e4pxk37jh2u"]
 
-[ext_resource type="Script" uid="uid://bx75ueseaa5a6" path="res://switch.gd" id="1_fh6bi"]
+[ext_resource type="Script" uid="uid://dx6wprrfx1b28" path="res://switch_2.gd" id="1_fh6bi"]
 [ext_resource type="Texture2D" uid="uid://cfmwvccs2niec" path="res://switch2.png" id="2_fh6bi"]
 
 [node name="Node2D" type="Node2D" unique_id=11456682]

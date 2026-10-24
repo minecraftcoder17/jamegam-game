@@ -7,7 +7,12 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	constant_force.x = 20 
-	#if linear_velocity.x < 25 :
-	#else : constant_force.x = 0
+func _process(_delta: float) -> void:
+	if linear_velocity.x < 35 :
+		constant_force.x = 70 - linear_velocity.x
+	else : constant_force.x = 0
+	$Littlecube.global_rotation = 0
+
+
+func _lose(body: Node2D) -> void:
+	get_tree().reload_current_scene()

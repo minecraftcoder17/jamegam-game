@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://bx75ueseaa5a6" path="res://switch.gd" id="1_8307x"]
 [ext_resource type="Texture2D" uid="uid://tio153rpmhn6" path="res://switch.png" id="1_it01i"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8307x"]
+size = Vector2(8, 8)
+
 [node name="Node2D" type="Node2D" unique_id=11456682]
 script = ExtResource("1_8307x")
 
@@ -10,6 +13,9 @@ script = ExtResource("1_8307x")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D" unique_id=1166942854]
 polygon = PackedVector2Array(-3, -4, 3, -4, 4, -3, 4, 3, 3, 4, -3, 4, -4, 3, -4, -3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D" unique_id=802674935]
+shape = SubResource("RectangleShape2D_8307x")
 
 [node name="Switch" type="Sprite2D" parent="." unique_id=925135950]
 position = Vector2(0, -4)

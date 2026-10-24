@@ -1,5 +1,5 @@
 extends Node2D
-
+var target = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,4 +8,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("ui_accept"):
+		target *= -1
+
+	$Node2D.position.y = move_toward($Node2D.position.y, -target * 8 - 8, delta * 128)
+	$Switch.scale.y = move_toward($Switch.scale.y, -target, delta * 12)

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dgkf4bxlpt5nf"]
+
+[ext_resource type="Texture2D" uid="uid://i3bmdxvyx7ra" path="res://incinerator.png" id="1_s2ta7"]
+[ext_resource type="Script" uid="uid://citmp76c1184y" path="res://incinerator.gd" id="2_ayt76"]
+
+[node name="Node2D" type="Node2D" unique_id=1135649756]
+
+[node name="Node2D" type="Node" parent="." unique_id=949395182]
+
+[node name="Incinerator" type="Sprite2D" parent="." unique_id=726806909]
+texture = ExtResource("1_s2ta7")
+script = ExtResource("2_ayt76")
+
+[node name="Camera2D" type="Camera2D" parent="Incinerator" unique_id=972593633]
+z_index = 2
+zoom = Vector2(3, 3)

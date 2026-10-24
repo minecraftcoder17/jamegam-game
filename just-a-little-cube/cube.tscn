@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://d2rrra4l55khr"]
+
+[ext_resource type="Texture2D" uid="uid://bjtyugs78fjfy" path="res://littlecube.png" id="1_jbd7x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wd2d1"]
+size = Vector2(6, 6)
+
+[node name="Cube" type="RigidBody2D" unique_id=1909965562]
+
+[node name="Littlecube" type="Sprite2D" parent="." unique_id=1515410040]
+texture = ExtResource("1_jbd7x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1077406954]
+shape = SubResource("RectangleShape2D_wd2d1")

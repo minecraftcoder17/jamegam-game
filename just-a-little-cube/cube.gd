@@ -3,8 +3,8 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	if autoload.spawnpos : global_position = autoload.spawnpos
+	else : autoload.spawnpos = global_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -14,5 +14,5 @@ func _process(_delta: float) -> void:
 	$Littlecube.global_rotation = 0
 
 
-func _lose(body: Node2D) -> void:
-	get_tree().reload_current_scene()
+func _lose(_body: Node2D) -> void:
+	get_tree().call_deferred("reload_current_scene")

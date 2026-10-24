@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://3ebiig83athx"]
+
+[ext_resource type="Script" uid="uid://dvpmtyl1okhlo" path="res://lift_2.gd" id="1_m843k"]
+[ext_resource type="Texture2D" uid="uid://cjxoxvlqfhems" path="res://lift.png" id="2_gxqmw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rdgm"]
+size = Vector2(32, 8)
+
+[node name="AnimatableBody2D" type="RigidBody2D" unique_id=1175192615]
+collision_mask = 8
+gravity_scale = 0.0
+script = ExtResource("1_m843k")
+
+[node name="Lift" type="Sprite2D" parent="." unique_id=251788955]
+rotation = 1.5707964
+scale = Vector2(1, -1)
+texture = ExtResource("2_gxqmw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=491470696]
+rotation = 1.5707964
+scale = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_6rdgm")
+one_way_collision_margin = 2.0

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b7e4pxk37jh2u"]
+
+[ext_resource type="Script" uid="uid://bx75ueseaa5a6" path="res://switch.gd" id="1_fh6bi"]
+[ext_resource type="Texture2D" uid="uid://cfmwvccs2niec" path="res://switch2.png" id="2_fh6bi"]
+
+[node name="Node2D" type="Node2D" unique_id=11456682]
+script = ExtResource("1_fh6bi")
+
+[node name="Node2D" type="AnimatableBody2D" parent="." unique_id=34532649]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D" unique_id=1166942854]
+polygon = PackedVector2Array(-3, -4, 11, -4, 12, -3, 12, 11, 11, 12, -3, 12, -4, 11, -4, -3)
+
+[node name="Switch" type="Sprite2D" parent="." unique_id=925135950]
+position = Vector2(0, -4)
+texture = ExtResource("2_fh6bi")
+offset = Vector2(4, 8)

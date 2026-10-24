@@ -11,8 +11,22 @@ config_version=5
 [application]
 
 config/name="Just a Little Cube"
+run/main_scene="uid://cqm0eioyrfhf7"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/mode=3
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/better-tile-editor/plugin.cfg")
+
+[layer_names]
+
+2d_physics/layer_1="Floor"
+2d_physics/layer_3="Spike"
 
 [physics]
 
@@ -24,3 +38,4 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(1.4439225e-06, 0.6045189, 0.82713467, 1)

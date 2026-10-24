@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://d2rrra4l55khr"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://dlynj2nvwk3dx" path="res://new_physics_material.tres" id="1_ftslj"]
 [ext_resource type="Texture2D" uid="uid://bjtyugs78fjfy" path="res://littlecube.png" id="1_jbd7x"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wd2d1"]
-size = Vector2(6, 6)
+[ext_resource type="Script" uid="uid://dy64wxdxw2d3c" path="res://cube.gd" id="1_wd2d1"]
 
 [node name="Cube" type="RigidBody2D" unique_id=1909965562]
+collision_layer = 0
+mass = 0.2
+physics_material_override = ExtResource("1_ftslj")
+gravity_scale = 0.2
+lock_rotation = true
+script = ExtResource("1_wd2d1")
 
 [node name="Littlecube" type="Sprite2D" parent="." unique_id=1515410040]
 texture = ExtResource("1_jbd7x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1077406954]
-shape = SubResource("RectangleShape2D_wd2d1")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=676710032]
+polygon = PackedVector2Array(-3, -4, 3, -4, 4, -3, 4, 3, 3, 4, -3, 4, -4, 3, -4, -3)

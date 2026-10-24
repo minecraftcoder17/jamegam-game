@@ -2,13 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://caaiv2i684j4y" path="res://inanimatecube.png" id="1_gt1vb"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gt1vb"]
+friction = 0.33
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_0hdss"]
 radius = 4.0
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=1582812953]
 collision_layer = 16
-collision_mask = 17
+collision_mask = 19
 mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_gt1vb")
 gravity_scale = 0.2
 
 [node name="Inanimatecube" type="Sprite2D" parent="." unique_id=2006442832]

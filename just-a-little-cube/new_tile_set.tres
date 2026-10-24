@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bm7tdghw348aw" path="res://tileset.png" id="1_02c43"]
 [ext_resource type="PackedScene" uid="uid://det6r5a2ynw2t" path="res://switch.tscn" id="2_peyie"]
 [ext_resource type="PackedScene" uid="uid://b7e4pxk37jh2u" path="res://switch2.tscn" id="3_x7jcc"]
+[ext_resource type="PackedScene" uid="uid://ce7lpxwb3cosq" path="res://cubefake.tscn" id="4_peyie"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbghi"]
 texture = ExtResource("1_02c43")
@@ -131,6 +132,7 @@ texture_region_size = Vector2i(8, 8)
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ihfcg"]
 scenes/1/scene = ExtResource("2_peyie")
 scenes/2/scene = ExtResource("3_x7jcc")
+scenes/3/scene = ExtResource("4_peyie")
 
 [resource]
 tile_size = Vector2i(8, 8)
@@ -151,7 +153,7 @@ metadata/_better_terrain = {
 &"path": "res://addons/better-tile-editor/icons/SingleTile.svg"
 }, "", {
 &"tile": {
-&"alt": 2,
+&"alt": 3,
 &"coord": [0, 0],
 &"size": [1, 1],
 &"source": 1

@@ -13,4 +13,7 @@ func _process(delta: float) -> void:
 	elif Input.is_action_pressed("Up"):
 		linear_velocity.y = -SPEED
 	else : linear_velocity.y *= 0.001**delta
-	
+
+	if Input.is_action_just_pressed("Down") or Input.is_action_just_pressed("Up"):
+		$AudioStreamPlayer2D.pitch_scale = 0.8 if Input.is_action_just_pressed("Down") else 1.4
+		$AudioStreamPlayer2D.play()

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dx6wprrfx1b28" path="res://switch_2.gd" id="1_fh6bi"]
 [ext_resource type="Texture2D" uid="uid://cfmwvccs2niec" path="res://switch2.png" id="2_fh6bi"]
+[ext_resource type="AudioStream" uid="uid://vdcnmnoxm06w" path="res://synth.wav" id="3_juwbj"]
 
 [node name="Node2D" type="RigidBody2D" unique_id=83204659]
 collision_mask = 0
@@ -14,3 +15,10 @@ polygon = PackedVector2Array(-3, -4, 11, -4, 12, -3, 12, 11, 11, 12, -3, 12, -4,
 position = Vector2(0, -4)
 texture = ExtResource("2_fh6bi")
 offset = Vector2(4, 8)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1657842103]
+stream = ExtResource("3_juwbj")
+volume_db = 10.0
+max_distance = 300.0
+attenuation = 2.0
+panning_strength = 1.87

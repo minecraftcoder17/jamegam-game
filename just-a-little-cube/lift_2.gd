@@ -14,3 +14,5 @@ func _process(delta: float) -> void:
 		linear_velocity.x = -SPEED
 	else : linear_velocity.x *= 0.001**delta
 	
+	if Input.is_action_just_pressed("Left") or Input.is_action_just_pressed("Right"):
+		$AudioStreamPlayer2D.play()

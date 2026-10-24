@@ -7,6 +7,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		target *= -1
+		$AudioStreamPlayer2D.pitch_scale = 1.2 + randf() * 0.1
+		$AudioStreamPlayer2D.play()
 	if global_position.y > startposition.y-target * 4 - 4 and target == 1 : 
 		linear_velocity.y = -50
 		if not global_position.y > startposition.y-target * 4 - 4:

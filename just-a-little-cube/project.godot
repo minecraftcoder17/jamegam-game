@@ -19,10 +19,6 @@ config/icon="res://icon.svg"
 
 autoload="*uid://lh55issqowb5"
 
-[display]
-
-window/size/mode=3
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/better-tile-editor/plugin.cfg")
